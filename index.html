@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="小缘的个人空间——由 3D 人物、贴纸与连续镜头组成的个人网站"
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23ff6b3e'/%3E%3Ccircle cx='32' cy='32' r='13' fill='%23fff8ec'/%3E%3C/svg%3E"
+    />
+    <title>XIAOYUAN — Personal Index</title>
+  </head>
+  <body>
+    <main id="app">
+      <div class="scene-layer" aria-hidden="false">
+        <canvas id="scene" aria-label="可拖动旋转的 3D 人物模型"></canvas>
+        <div class="scene-wash" aria-hidden="true"></div>
+        <div class="grain" aria-hidden="true"></div>
+        <div class="frame" aria-hidden="true">
+          <span class="frame-index">XY / 2026</span>
+          <span class="frame-state" id="frame-state">EXPLORE</span>
+        </div>
+      </div>
+
+      <section class="hero" id="top" aria-label="小缘的个人空间首页">
+        <header class="brand">
+          <p class="eyebrow">XIAOYUAN <span>/ PERSONAL INDEX / 2026</span></p>
+          <h1 class="hero-title">
+            <span class="hero-title-intro">ME, IN</span>
+            <em>THREE</em>
+            <strong>DIMENSIONS.</strong>
+          </h1>
+          <p class="brand-copy">
+            <strong>A face full of clues.</strong>
+            <span>Drag to look closer. Scroll to know the rest.</span>
+          </p>
+        </header>
+
+        <div class="hero-note" aria-hidden="true">
+          <span>LIVING</span>
+          <span>PORTRAIT</span>
+        </div>
+
+        <div class="scroll-cue">
+          <span>DRAG TO LOOK · SCROLL TO KNOW</span>
+          <i aria-hidden="true"></i>
+        </div>
+      </section>
+
+      <div class="story" id="story" aria-label="个人内容章节"></div>
+
+      <nav class="film-dock" id="film-dock" aria-label="章节导航"></nav>
+
+      <div class="loading-card" id="loading-card" role="status">
+        <div class="loading-copy">
+          <span>正在加载 3D 人物</span>
+          <strong id="loading-value">0%</strong>
+        </div>
+        <div class="loading-track" aria-hidden="true">
+          <span id="loading-progress"></span>
+        </div>
+      </div>
+
+      <div class="error-card" id="error-card" hidden>
+        <p class="eyebrow">3D LOAD ERROR</p>
+        <h2>模型暂时没有加载出来</h2>
+        <p id="error-message">正文仍可继续浏览，请稍后刷新重试。</p>
+      </div>
+
+      <div class="locked-toast" id="locked-toast" role="status" aria-live="polite">
+        <span class="locked-toast-dot"></span>
+        <span>区域尚未开放</span>
+      </div>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
